@@ -19,7 +19,7 @@ int solution1(int arr[], int n) //Time complexity = O(N)
     int minprice = INT_MAX;
     for (int i = 0; i < n; i++)
     {
-        minprice = min(arr[i], minprice);
+        minprice = min(minprice, arr[i]);
         maxprice = max(maxprice, arr[i]- minprice);
     }
     return maxprice;
