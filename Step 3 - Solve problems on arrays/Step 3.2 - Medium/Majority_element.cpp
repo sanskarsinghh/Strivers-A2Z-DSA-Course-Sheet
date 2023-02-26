@@ -2,8 +2,15 @@
 using namespace std;
 int solution(int arr[], int n)
 {
-    sort(arr, arr + n);
-    return arr[n / 2];
+    int count = 0;
+    int ele = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if(count == 0) ele = arr[i];
+        if(ele == arr[i]) count+=1;
+        else count -=1;
+    }
+    return ele;
 }
 int main()
 {
