@@ -6,7 +6,7 @@ int Merge(vector < int > & nums, int low, int mid, int high) {
   int total = 0;
   int j = mid + 1;
   for (int i = low; i <= mid; i++) {
-    while (j <= high && nums[i] > 2 LL * nums[j]) {
+    while (j <= high && nums[i] > 2 * nums[j]) {
       j++;
     }
     total += (j - (mid + 1));
