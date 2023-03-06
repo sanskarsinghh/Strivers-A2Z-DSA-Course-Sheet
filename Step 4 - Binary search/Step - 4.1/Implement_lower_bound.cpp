@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-int solution(int arr[], int n, int x)
+int solution(int arr[], int n, int x) // Iterative solution
 {
     int ans = -1;
     int low = 0;
@@ -27,13 +27,23 @@ int solution(int arr[], int n, int x)
             low = mid + 1;
         }
     }
-        return ans;
+    return ans;
 }
+
+void solution2(int arr[], int n, int x) // Using STL to calculate the floor value
+{
+    int ind = lower_bound(arr, arr + n, x) - arr;
+    ind--;
+    if(ind>=0) cout << arr[ind] << endl;
+    else cout << -1;
+}
+
 int main()
 {
     int arr[] = {1, 2, 8, 10, 11, 12, 19};
     int n = sizeof(arr) / sizeof(arr[0]);
-    int x = 8;
-    cout << solution(arr, n, x) << endl;
+    int x = 2;
+    // cout << solution(arr, n, x) << endl;
+    solution2(arr, n, x);
     return 0;
 }
