@@ -9,11 +9,11 @@ int solution(int arr[], int n) // TC : O(log(n))
         int mid = (low + high) / 2;
         if(mid == 0) return arr[0] > arr[1] ? arr[0] : arr[1];
         if(mid == n-1) return arr[n-1] > arr[n-2] ? arr[n-1] : arr[n-2];
-        if(arr[mid] > arr[mid + 1] && arr[mid] > arr[mid-1]) return mid;
-        if(arr[mid] < arr[mid-1]) high = mid - 1;
-        else low = mid + 1;
+        if(arr[mid] > arr[mid + 1] && arr[mid] > arr[mid-1]) return mid; // Checking if mid is greater than it's neighbors
+        if(arr[mid] < arr[mid-1]) high = mid - 1; // Checking the left side of the array for the peak element
+        else low = mid + 1; // Checking the right side of the array for the peak element
     }
-    return low;
+    return low; // Return the answer as low
 }
 int main()
 {
