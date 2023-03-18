@@ -15,8 +15,8 @@ int solution(int arr1[], int n, int arr2[], int m, int k)
     int left1 = cut1 == 0 ? INT_MIN : arr1[cut1 - 1];
     int left2 = cut2 == 0 ? INT_MIN : arr2[cut2 - 1];
 
-    int right1 = cut1 == 0 ? INT_MAX : arr1[cut1];
-    int right2 = cut2 == 0 ? INT_MAX : arr2[cut2];
+    int right1 = cut1 == n ? INT_MAX : arr1[cut1];
+    int right2 = cut2 == m ? INT_MAX : arr2[cut2];
 
     while (low < high)
     {
