@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+//displaying the array after sorting it
 void display(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
@@ -7,9 +8,10 @@ void display(int arr[], int n)
         cout << arr[i] << " ";
     }
 }
-int selection_sort(int arr[], int n)
+//Selection sort function takes an array and the size of the array and returns nothing
+void selection_sort(int arr[], int n)
 {
-    int indexmin;
+    int indexmin; //intialising the variable for the 
     for (int i = 0; i < n - 1; i++)
     {
         indexmin = i;
